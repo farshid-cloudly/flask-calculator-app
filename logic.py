@@ -116,7 +116,9 @@ class Multiply(Resource):
         return jsonify(ret_map)
 
 
-# class Divide(Resource):
+class Divide(Resource):
+    def a(self):
+        return "aa"
 #     def post(self):
 #         # If I am here, then the resource Divide was requested using the method POST
 
