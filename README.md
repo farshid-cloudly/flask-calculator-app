@@ -1,4 +1,4 @@
-# Flask-Calculator-Beginner
+# Flask-Calculator-App
 This is Beginners Friendly Flask Application which does the basic arithmetic operations (+,-,*,/) 
 
 [Click here check the Docker Hub Repo](https://hub.docker.com/r/santhoshkdhana/flask-calculator-beginner)
