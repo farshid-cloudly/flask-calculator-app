@@ -55,24 +55,24 @@ class TestSnippet(unittest.TestCase):
         response = self.client.post('/subtract', json=self.payload)
         self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 301})
 
-#     def test_mul(self):        
-#         self.payload = {'x': 2, 'y':3}
-#         response = self.client.post('/multiply', json=self.payload)
-#         self.assertEqual(response.get_json(), {'Message': 6, 'Status Code': 200})
-#         self.payload = {"x": 143}
-#         response = self.client.post('/multiply', json=self.payload)
-#         self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 301})
+    def test_mul(self):        
+        self.payload = {'x': 2, 'y':3}
+        response = self.client.post('/multiply', json=self.payload)
+        self.assertEqual(response.get_json(), {'Message': 6, 'Status Code': 200})
+        self.payload = {"x": 143}
+        response = self.client.post('/multiply', json=self.payload)
+        self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 301})
 
-#     def test_div(self):        
-#         self.payload = {'x': 4, 'y':2}
-#         response = self.client.post('/division', json=self.payload)
-#         self.assertEqual(response.get_json(), {'Message': 2, 'Status Code': 200})
-#         self.payload = {"x": 143}
-#         response = self.client.post('/division', json=self.payload)
-#         self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 301})
-#         self.payload = {"x": 143, "y": 0}
-#         response = self.client.post('/division', json=self.payload)
-#         self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 302})
+    def test_div(self):        
+        self.payload = {'x': 4, 'y':2}
+        response = self.client.post('/division', json=self.payload)
+        self.assertEqual(response.get_json(), {'Message': 2, 'Status Code': 200})
+        self.payload = {"x": 143}
+        response = self.client.post('/division', json=self.payload)
+        self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 301})
+        self.payload = {"x": 143, "y": 0}
+        response = self.client.post('/division', json=self.payload)
+        self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 302})
 
     def test_hello(self):
         response = self.client.get('/')
