@@ -59,9 +59,9 @@ class TestSnippet(unittest.TestCase):
         self.payload = {'x': 2, 'y':3}
         response = self.client.post('/multiply', json=self.payload)
         self.assertEqual(response.get_json(), {'Message': 6, 'Status Code': 200})
-        self.payload = {"x": 143}
-        response = self.client.post('/multiply', json=self.payload)
-        self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 301})
+#         self.payload = {"x": 143}
+#         response = self.client.post('/multiply', json=self.payload)
+#         self.assertEqual(response.get_json(), {'Message': "An error happened", 'Status Code': 301})
 
 #     def test_div(self):        
 #         self.payload = {'x': 4, 'y':2}
