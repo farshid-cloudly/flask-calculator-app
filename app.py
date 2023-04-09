@@ -15,9 +15,6 @@ api.add_resource(Divide, "/division")
 @app.route('/')
 def hello_world():
     return "Hello World!"
-def hello_world2():
-    return "Hello World!"
-
 
 if __name__=="__main__":
     app.run(host="0.0.0.0")
