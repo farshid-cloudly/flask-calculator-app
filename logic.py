@@ -21,7 +21,7 @@ def check_posted_data(posted_data, function_name):
 # Math functions
 class Add(Resource):
     def post(self):
-        # If I am here, then the resouce Add was requested using the method POST
+        # If I am here, then the resource Add was requested using the method POST
 
         # Step 1: Get posted data:
         posted_data = request.get_json()
